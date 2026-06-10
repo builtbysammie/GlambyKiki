@@ -96,7 +96,7 @@
     #loader .l-progress { width: 180px; height: 1px; background: rgba(253,246,238,0.1); margin: 30px auto 0; border-radius: 999px; overflow: hidden; }
     #loader .l-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 999px; animation: fillProgress 1.6s cubic-bezier(0.4,0,0.2,1) forwards; }
 
-    @media (max-width: 360deg) { to { transform: rotate(360deg); } }
+    @keyframes loaderSpin { to { transform: rotate(360deg); } }
     @keyframes liftIn { to { transform: translateY(0); } }
     @keyframes growRule { to { height: 48px; } }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
@@ -148,9 +148,9 @@
       will-change: opacity;
     }
     .hero-slide.active { opacity: 1; }
-    .hero-slide-1 { background-image: url('look1-placeholder.png'); }
-    .hero-slide-2 { background-image: url('look2-placeholder.png'); }
-    .hero-slide-3 { background-image: url('look3-placeholder.png'); }
+    .hero-slide-1 { background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/Kiki-look1-background.png'); }
+    .hero-slide-2 { background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look2-background.png'); }
+    .hero-slide-3 { background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look3-edo-background.png'); }
 
     .hero-slideshow-overlay {
       position: absolute; inset: 0; z-index: 1;
@@ -341,7 +341,7 @@
 
     /* PROCESS */
     .process-layout { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 14px; align-items: stretch; }
-    .process-panel { border-radius: var(--r); border: 1px solid rgba(253,246,238,0.1); background: rgba(26,20,16,0.7); padding: 40px 36px; display: flex; flex-direction: column; gap: 36px; }
+    .process-layout .process-panel { border-radius: var(--r); border: 1px solid rgba(253,246,238,0.1); background: rgba(26,20,16,0.7); padding: 40px 36px; display: flex; flex-direction: column; gap: 36px; }
     .steps { display: flex; flex-direction: column; gap: 12px; }
     .step { display: grid; grid-template-columns: 48px 1fr; gap: 16px; padding: 18px 16px; border-radius: 20px; background: rgba(253,246,238,0.04); border: 1px solid rgba(253,246,238,0.07); transition: background 0.3s; }
     .step:hover { background: rgba(253,246,238,0.07); }
@@ -448,6 +448,7 @@
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
+  <!-- LOADER -->
   <div id="loader" aria-hidden="true">
     <div class="l-bg"></div>
     <div class="l-inner">
@@ -466,6 +467,7 @@
 
   <main class="site">
 
+    <!-- NAV -->
     <nav class="nav" id="mainNav">
       <a class="brand" href="#top">
         <span class="brand-mark">RV</span>
@@ -480,8 +482,10 @@
       <a class="btn-book" href="#">Book Glam ↗</a>
     </nav>
 
+    <!-- HERO -->
     <header class="hero" id="top">
 
+      <!-- IMAGE SLIDESHOW BACKGROUND -->
       <div class="hero-slideshow" aria-hidden="true">
         <div class="hero-slide hero-slide-1 active" id="heroSlide0"></div>
         <div class="hero-slide hero-slide-2" id="heroSlide1"></div>
@@ -492,6 +496,7 @@
         <div class="beauty-orb orb-three"></div>
       </div>
 
+      <!-- Slideshow dots -->
       <div class="hero-slide-dots" aria-hidden="true">
         <div class="hero-slide-dot active" data-slide="0"></div>
         <div class="hero-slide-dot" data-slide="1"></div>
@@ -524,7 +529,7 @@
               <div class="phone-screen">
                 <img
                   class="phone-screen-img"
-                  src="bridal-transformation-placeholder.png"
+                  src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look4-cover-bridal-transformation-glam-NOT-SOFT-PROCESS-GLAM.png"
                   alt="Bridal transformation glam"
                   loading="eager"
                 >
@@ -542,9 +547,10 @@
       </div>
     </header>
 
+    <!-- SERVICES -->
     <section id="services">
       <div class="section-bg-layer" aria-hidden="true">
-        <div class="section-bg-img" style="background-image: url('services-bg-placeholder.png');"></div>
+        <div class="section-bg-img" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/Kiki-look1-background.png');"></div>
         <div class="section-bg-overlay" style="background: linear-gradient(180deg, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.72) 50%, rgba(10,8,6,0.92) 100%);"></div>
       </div>
 
@@ -591,9 +597,10 @@
       </div>
     </section>
 
+    <!-- TRANSFORMATIONS -->
     <section id="reels" class="reels-section-bg">
       <div class="section-bg-layer" aria-hidden="true">
-        <div class="section-bg-img" style="background-image: url('transformations-bg-placeholder.png'); animation-delay: 2s;"></div>
+        <div class="section-bg-img" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look2-background.png'); animation-delay: 2s;"></div>
         <div class="section-bg-overlay" style="background: linear-gradient(180deg, rgba(10,8,6,0.82) 0%, rgba(10,8,6,0.65) 50%, rgba(10,8,6,0.88) 100%);"></div>
       </div>
 
@@ -610,8 +617,9 @@
 
         <div class="reels-grid">
 
+          <!-- Reel 1 -->
           <a class="reel-card reveal" href="#" aria-label="Watch Lifestyle showcase">
-            <img class="reel-card-thumb" src="look1-thumb-placeholder.png" alt="Lifestyle look portfolio" loading="lazy">
+            <img class="reel-card-thumb" src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look5-cover-lifestyle-NOT-BRIDAL-GLAM-REVEAL.png" alt="Lifestyle look portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
@@ -620,8 +628,9 @@
             </div>
           </a>
 
+          <!-- Reel 2 -->
           <a class="reel-card reveal" href="#" aria-label="Watch Cultural Bridal showcase">
-            <img class="reel-card-thumb" src="look2-thumb-placeholder.png" alt="Traditional look portfolio" loading="lazy">
+            <img class="reel-card-thumb" src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look6-cover-edo-bridal-NOT-PARTY-MAKEUP-FINISH.png" alt="Traditional look portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
@@ -630,8 +639,9 @@
             </div>
           </a>
 
+          <!-- Reel 3 -->
           <a class="reel-card reveal" href="#" aria-label="Watch Bridal Transformation showcase">
-            <img class="reel-card-thumb" src="look3-thumb-placeholder.png" alt="Bridal glam portfolio" loading="lazy">
+            <img class="reel-card-thumb" src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look4-cover-bridal-transformation-glam-NOT-SOFT-PROCESS-GLAM.png" alt="Bridal glam portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
@@ -640,8 +650,9 @@
             </div>
           </a>
 
+          <!-- Reel 4 -->
           <a class="reel-card reveal" href="#" aria-label="Watch Modern Bridal showcase">
-            <img class="reel-card-thumb" src="look4-thumb-placeholder.png" alt="Classic bridal portfolio" loading="lazy">
+            <img class="reel-card-thumb" src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look7-cover-bridal-glam-NOT-MAKEUP-TRAINING.png" alt="Classic bridal portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
@@ -650,8 +661,9 @@
             </div>
           </a>
 
+          <!-- Reel 5 -->
           <a class="reel-card reveal" href="#" aria-label="Watch Reception showcase">
-            <img class="reel-card-thumb" src="look5-thumb-placeholder.png" alt="Reception look portfolio" loading="lazy">
+            <img class="reel-card-thumb" src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look8-cover-Traditional-Bridal-Look-NOT-AVIALABLE-TO-TRAVEL.png" alt="Reception look portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
@@ -670,9 +682,11 @@
       </div>
     </section>
 
+    <!-- PROCESS -->
     <section id="process">
       <div class="section-bg-layer" aria-hidden="true">
-        <div class="section-bg-img" style="background-image: url('process-bg-placeholder.png'); animation-delay: 4s;"></div>
+        <div class="section-bg-layer" aria-hidden="true">
+        <div class="section-bg-img" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look3-edo-background.png'); animation-delay: 4s;"></div>
         <div class="section-bg-overlay" style="background: rgba(10,8,6,0.82);"></div>
       </div>
 
@@ -711,7 +725,7 @@
             </div>
           </div>
 
-          <div class="process-img reveal" style="background-image: url('process-panel-placeholder.png');">
+          <div class="process-img reveal" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/Kiki-look1-background.png');">
             <div class="process-img-content">
               <div class="process-img-inner">
                 <div class="video-play-large">▶</div>
@@ -725,6 +739,7 @@
       </div>
     </section>
 
+    <!-- BOOKING -->
     <section id="booking">
       <div class="container">
         <div class="booking-wrap reveal">
@@ -744,7 +759,7 @@
               <a class="btn-ghost" href="#">Review Brand Directory</a>
             </div>
           </div>
-          <div class="booking-img" style="background-image: url('booking-panel-placeholder.png');"></div>
+          <div class="booking-img" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look2-background.png');"></div>
         </div>
       </div>
     </section>

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Glamsbykiki | Pro Makeup Artist in Lagos</title>
-  <meta name="description" content="Glamsbykiki is a pro makeup artist in Lagos offering bridal glam, party makeup, beauty training, and travel bookings." />
-  <meta property="og:title" content="Glamsbykiki | Bridal, Party Makeup & Training" />
+  <title>Rovoche | Pro Makeup Artist in Lagos</title>
+  <meta name="description" content="Rovoche is a pro makeup artist in Lagos offering bridal glam, party makeup, beauty training, and travel bookings." />
+  <meta property="og:title" content="Rovoche | Bridal, Party Makeup & Training" />
   <meta property="og:description" content="Premium makeup artistry for bridal, party, travel bookings, and training in Lagos." />
   <meta property="og:type" content="website" />
 
@@ -96,7 +96,7 @@
     #loader .l-progress { width: 180px; height: 1px; background: rgba(253,246,238,0.1); margin: 30px auto 0; border-radius: 999px; overflow: hidden; }
     #loader .l-progress-fill { height: 100%; width: 0%; background: linear-gradient(90deg, var(--gold), var(--gold-light)); border-radius: 999px; animation: fillProgress 1.6s cubic-bezier(0.4,0,0.2,1) forwards; }
 
-    @keyframes loaderSpin { to { transform: rotate(360deg); } }
+    @media (max-width: 360deg) { to { transform: rotate(360deg); } }
     @keyframes liftIn { to { transform: translateY(0); } }
     @keyframes growRule { to { height: 48px; } }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
@@ -148,9 +148,9 @@
       will-change: opacity;
     }
     .hero-slide.active { opacity: 1; }
-    .hero-slide-1 { background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/Kiki-look1-background.png'); }
-    .hero-slide-2 { background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look2-background.png'); }
-    .hero-slide-3 { background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look3-edo-background.png'); }
+    .hero-slide-1 { background-image: url('look1-placeholder.png'); }
+    .hero-slide-2 { background-image: url('look2-placeholder.png'); }
+    .hero-slide-3 { background-image: url('look3-placeholder.png'); }
 
     .hero-slideshow-overlay {
       position: absolute; inset: 0; z-index: 1;
@@ -159,7 +159,6 @@
         linear-gradient(0deg, rgba(10,8,6,1) 0%, rgba(10,8,6,0) 38%);
     }
 
-    /* Slide dots indicator */
     .hero-slide-dots {
       position: absolute; bottom: 56px; left: 50%; transform: translateX(-50%);
       z-index: 3; display: flex; gap: 8px; align-items: center;
@@ -172,14 +171,12 @@
     }
     .hero-slide-dot.active { width: 22px; background: var(--gold-light); }
 
-    /* Orbs over the slideshow */
     .beauty-orb { position: absolute; border-radius: 999px; filter: blur(16px); opacity: 0.75; animation: driftOrb 12s ease-in-out infinite alternate; z-index: 2; }
     .orb-one { width: 360px; height: 520px; right: 9%; top: 16%; background: linear-gradient(180deg, rgba(232,201,122,0.18), rgba(158,78,69,0.06)); transform: rotate(18deg); }
     .orb-two { width: 240px; height: 240px; left: 8%; top: 28%; background: rgba(201,153,62,0.1); animation-delay: 0.5s; }
     .orb-three { width: 420px; height: 190px; right: 22%; bottom: 12%; background: rgba(253,246,238,0.05); animation-delay: 1s; }
     @keyframes driftOrb { from { transform: translate3d(0,0,0) rotate(10deg) scale(1); } to { transform: translate3d(-18px,18px,0) rotate(18deg) scale(1.05); } }
 
-    /* Mobile: pan the hero slides left → right */
     @media (max-width: 640px) {
       .hero-slide.active.pan-active {
         background-size: auto 100%;
@@ -252,10 +249,8 @@
     .section-bg-overlay {
       position: absolute; inset: 0;
     }
-    /* Make section content appear above the bg layer */
     section .container { position: relative; z-index: 2; }
 
-    /* Mobile: pan left → right for section backgrounds */
     @media (max-width: 640px) {
       .section-bg-img {
         background-size: auto 100%;
@@ -354,7 +349,6 @@
     .step strong { display: block; font-size: 14px; font-weight: 600; margin-bottom: 5px; }
     .step span { font-size: 13px; line-height: 1.6; color: var(--parchment-dim); }
 
-    /* Process image panel (now uses bg image) */
     .process-img {
       border-radius: var(--r); overflow: hidden; position: relative;
       border: 1px solid rgba(253,246,238,0.1); min-height: 520px;
@@ -371,7 +365,6 @@
     .video-play-large { width: 72px; height: 72px; border-radius: 50%; display: grid; place-items: center; background: rgba(253,246,238,0.1); border: 1px solid rgba(253,246,238,0.2); color: var(--gold-light); backdrop-filter: blur(16px); font-size: 26px; margin: 0 auto 20px; animation: pulsePlay 2.4s ease-in-out infinite; }
     @keyframes pulsePlay { 0%,100% { box-shadow: 0 0 0 0 rgba(232,201,122,0.22); } 50% { box-shadow: 0 0 0 18px rgba(232,201,122,0); } }
 
-    /* Mobile pan for process-img */
     @media (max-width: 640px) {
       .process-img {
         background-size: auto 100%;
@@ -390,7 +383,6 @@
     .pill:hover { border-color: rgba(232,201,122,0.4); background: rgba(201,153,62,0.08); }
     .booking-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 
-    /* Booking image panel (no video, uses bg image) */
     .booking-img {
       min-height: 500px; position: relative; overflow: hidden;
       background-repeat: no-repeat;
@@ -399,7 +391,6 @@
     }
     .booking-img::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(26,20,16,0.88), transparent 50%); z-index: 1; }
 
-    /* Mobile pan for booking-img */
     @media (max-width: 640px) {
       .booking-img {
         background-size: auto 100%;
@@ -411,6 +402,7 @@
     /* FOOTER */
     footer { padding: 28px 0 44px; color: rgba(253,246,238,0.42); font-size: 12.5px; letter-spacing: 0.04em; }
     .footer-inner { display: flex; justify-content: space-between; gap: 14px; flex-wrap: wrap; border-top: 1px solid rgba(253,246,238,0.08); padding-top: 22px; }
+    footer a { color: var(--gold-light); border-bottom: 1px solid rgba(232,201,122,0.35); }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.9s cubic-bezier(0.2,0.9,0.2,1), transform 0.9s cubic-bezier(0.2,0.9,0.2,1); }
@@ -456,14 +448,13 @@
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
-  <!-- LOADER -->
   <div id="loader" aria-hidden="true">
     <div class="l-bg"></div>
     <div class="l-inner">
-      <div class="l-oval"><span class="l-monogram">GK</span></div>
+      <div class="l-oval"><span class="l-monogram">RV</span></div>
       <div class="l-title">
-        <span>Glamsby</span>
-        <span>Kiki</span>
+        <span>Rovoche</span>
+        <span>Glam Studio</span>
       </div>
       <div class="l-rule"></div>
       <div class="l-sub">Lagos &nbsp;·&nbsp; Makeup Artistry</div>
@@ -475,37 +466,32 @@
 
   <main class="site">
 
-    <!-- NAV -->
     <nav class="nav" id="mainNav">
       <a class="brand" href="#top">
-        <span class="brand-mark">GK</span>
-        <span>Glamsbykiki</span>
+        <span class="brand-mark">RV</span>
+        <span>Rovoche</span>
       </a>
       <div class="nav-links">
         <a href="#services">Services</a>
-        <a href="#reels">Reels</a>
+        <a href="#reels">Transformations</a>
         <a href="#process">Process</a>
         <a href="#booking">Booking</a>
       </div>
-      <a class="btn-book" href="https://wa.me/2348145994555" target="_blank" rel="noopener">Book Glam ↗</a>
+      <a class="btn-book" href="#">Book Glam ↗</a>
     </nav>
 
-    <!-- HERO -->
     <header class="hero" id="top">
 
-      <!-- IMAGE SLIDESHOW BACKGROUND -->
       <div class="hero-slideshow" aria-hidden="true">
         <div class="hero-slide hero-slide-1 active" id="heroSlide0"></div>
         <div class="hero-slide hero-slide-2" id="heroSlide1"></div>
         <div class="hero-slide hero-slide-3" id="heroSlide2"></div>
         <div class="hero-slideshow-overlay"></div>
-        <!-- Atmospheric orbs layered over the images -->
         <div class="beauty-orb orb-one"></div>
         <div class="beauty-orb orb-two"></div>
         <div class="beauty-orb orb-three"></div>
       </div>
 
-      <!-- Slideshow dots -->
       <div class="hero-slide-dots" aria-hidden="true">
         <div class="hero-slide-dot active" data-slide="0"></div>
         <div class="hero-slide-dot" data-slide="1"></div>
@@ -517,7 +503,7 @@
           <div class="tag"><span class="tag-dot"></span>Pro MUA · Bridal · Party · Training</div>
           <h1>Bridal glam.<br><em>Party</em><br>beauty.</h1>
           <p class="hero-desc">
-            Glamsbykiki is a Lagos-based pro MUA creating clean bridal glam, party-ready faces, and beauty training for women who want a polished finish — with travel bookings available.
+            Rovoche is a Lagos-based premium makeup artistry studio creating clean bridal glam, party-ready faces, and beauty training for clients who want a polished, high-end finish.
           </p>
           <div class="hero-actions">
             <a class="btn-primary" href="#booking">Book Your Glam</a>
@@ -536,16 +522,15 @@
             <div class="phone-frame">
               <div class="phone-top"></div>
               <div class="phone-screen">
-                <!-- Cover image in phone frame -->
                 <img
                   class="phone-screen-img"
-                  src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look4-cover-bridal-transformation-glam-NOT-SOFT-PROCESS-GLAM.png"
+                  src="bridal-transformation-placeholder.png"
                   alt="Bridal transformation glam"
                   loading="eager"
                 >
                 <div class="play-pulse">▶</div>
                 <div class="phone-copy">
-                  <span>Transformation Reel</span>
+                  <span>Transformation Reveal</span>
                   <strong>Bridal glam reveal</strong>
                 </div>
               </div>
@@ -557,22 +542,20 @@
       </div>
     </header>
 
-    <!-- SERVICES — background: look1 image -->
     <section id="services">
-      <!-- Section background layer -->
       <div class="section-bg-layer" aria-hidden="true">
-        <div class="section-bg-img" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/Kiki-look1-background.png');"></div>
+        <div class="section-bg-img" style="background-image: url('services-bg-placeholder.png');"></div>
         <div class="section-bg-overlay" style="background: linear-gradient(180deg, rgba(10,8,6,0.88) 0%, rgba(10,8,6,0.72) 50%, rgba(10,8,6,0.92) 100%);"></div>
       </div>
 
       <div class="container">
         <div class="section-lead reveal">
           <div>
-            <div class="kicker">What she offers</div>
+            <div class="kicker">Expertise Offered</div>
             <h2 class="display">Glam built for real events.</h2>
           </div>
           <p class="section-note">
-            From Lagos-based bookings to travel appointments — every service is crafted for clients who want a polished, camera-ready finish.
+            From professional studio bookings to travel appointments — every service is crafted for individuals who want a sophisticated, camera-ready finish.
           </p>
         </div>
         <div class="services-grid">
@@ -580,151 +563,116 @@
             <span class="service-num">01</span>
             <div>
               <h3>Bridal Glam</h3>
-              <p>Elegant wedding makeup for traditional, court, white wedding, and reception moments.</p>
+              <p>Elegant wedding makeup tailored perfectly for traditional, court, white wedding, and reception moments.</p>
             </div>
           </article>
           <article class="service-card reveal">
             <span class="service-num">02</span>
             <div>
               <h3>Event Makeup</h3>
-              <p>Clean, camera-ready looks for birthdays, dinners, shoots, church events, parties, and celebrations.</p>
+              <p>Clean, beautifully blended looks for birthdays, dinners, shoots, parties, and milestones.</p>
             </div>
           </article>
           <article class="service-card reveal">
             <span class="service-num">03</span>
             <div>
               <h3>Travel Glam</h3>
-              <p>Available to travel for bookings, bridal parties, shoots, and event-ready beauty moments across Nigeria and beyond.</p>
+              <p>Destination makeup luxury available for bridal cohorts, editorial shoots, and premium fashion events globally.</p>
             </div>
           </article>
           <article class="service-card reveal">
             <span class="service-num">04</span>
             <div>
               <h3>Makeup Training</h3>
-              <p>Practical beauty education for learners who want technique, confidence, and real brand direction.</p>
+              <p>Practical beauty masterclasses focused on technical precision, application confidence, and artistic direction.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- REELS SECTION — background: look2 image -->
     <section id="reels" class="reels-section-bg">
-
-      <!-- Section background layer -->
       <div class="section-bg-layer" aria-hidden="true">
-        <div class="section-bg-img" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look2-background.png'); animation-delay: 2s;"></div>
+        <div class="section-bg-img" style="background-image: url('transformations-bg-placeholder.png'); animation-delay: 2s;"></div>
         <div class="section-bg-overlay" style="background: linear-gradient(180deg, rgba(10,8,6,0.82) 0%, rgba(10,8,6,0.65) 50%, rgba(10,8,6,0.88) 100%);"></div>
       </div>
 
       <div class="container">
         <div class="section-lead reveal">
           <div>
-            <div class="kicker">Transformation reels</div>
+            <div class="kicker">Visual Portfolio</div>
             <h2 class="display">Watch the transformations.</h2>
           </div>
           <p class="section-note">
-            Click any card to watch the reel on Instagram. Each one is a full before-and-after transformation or process reveal.
+            Explore premium interactive case studies. Each card presents a signature before-and-after showcase or complete structural look reveal.
           </p>
         </div>
 
         <div class="reels-grid">
 
-          <!-- Reel 1: kiki-look5 — Lifestyle (was "Bridal Glam Reveal") -->
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DX6TN4otUcj/" target="_blank" rel="noopener" aria-label="Watch Lifestyle reel on Instagram">
-            <img
-              class="reel-card-thumb"
-              src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look5-cover-lifestyle-NOT-BRIDAL-GLAM-REVEAL.png"
-              alt="Lifestyle makeup look"
-              loading="lazy"
-            >
+          <a class="reel-card reveal" href="#" aria-label="Watch Lifestyle showcase">
+            <img class="reel-card-thumb" src="look1-thumb-placeholder.png" alt="Lifestyle look portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
               <span class="reel-label">Lifestyle</span>
-              <strong>Lifestyle</strong>
+              <strong>Editorial Skin</strong>
             </div>
           </a>
 
-          <!-- Reel 2: kiki-look6 — Edo Bridal (was "Party Makeup Finish") -->
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DXMekKLiBNO/" target="_blank" rel="noopener" aria-label="Watch Edo Bridal reel on Instagram">
-            <img
-              class="reel-card-thumb"
-              src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look6-cover-edo-bridal-NOT-PARTY-MAKEUP-FINISH.png"
-              alt="Edo bridal makeup look"
-              loading="lazy"
-            >
+          <a class="reel-card reveal" href="#" aria-label="Watch Cultural Bridal showcase">
+            <img class="reel-card-thumb" src="look2-thumb-placeholder.png" alt="Traditional look portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
               <span class="reel-label">Bridal</span>
-              <strong>Edo Bridal</strong>
+              <strong>Traditional Glam</strong>
             </div>
           </a>
 
-          <!-- Reel 3: kiki-look4 — Bridal Transformation Glam (was "Soft Glam Process") -->
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DWEohUzCAOk/" target="_blank" rel="noopener" aria-label="Watch Bridal Transformation Glam reel on Instagram">
-            <img
-              class="reel-card-thumb"
-              src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look4-cover-bridal-transformation-glam-NOT-SOFT-PROCESS-GLAM.png"
-              alt="Bridal transformation glam"
-              loading="lazy"
-            >
+          <a class="reel-card reveal" href="#" aria-label="Watch Bridal Transformation showcase">
+            <img class="reel-card-thumb" src="look3-thumb-placeholder.png" alt="Bridal glam portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
               <span class="reel-label">Bridal</span>
-              <strong>Bridal Transformation Glam</strong>
+              <strong>Signature Glow</strong>
             </div>
           </a>
 
-          <!-- Reel 4: kiki-look7 — Bridal Glam (was "Makeup Training & Technique") -->
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DRz12jpDYYB/" target="_blank" rel="noopener" aria-label="Watch Bridal Glam reel on Instagram">
-            <img
-              class="reel-card-thumb"
-              src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look7-cover-bridal-glam-NOT-MAKEUP-TRAINING.png"
-              alt="Bridal glam makeup look"
-              loading="lazy"
-            >
+          <a class="reel-card reveal" href="#" aria-label="Watch Modern Bridal showcase">
+            <img class="reel-card-thumb" src="look4-thumb-placeholder.png" alt="Classic bridal portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
               <span class="reel-label">Bridal</span>
-              <strong>Bridal Glam</strong>
+              <strong>Classic White Wedding</strong>
             </div>
           </a>
 
-          <!-- Reel 5: kiki-look8 — Traditional Bridal Look (was "Available to Travel") -->
-          <a class="reel-card reveal" href="https://www.instagram.com/reel/DCNHQvhOcnx/" target="_blank" rel="noopener" aria-label="Watch Traditional Bridal Look reel on Instagram">
-            <img
-              class="reel-card-thumb"
-              src="https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look8-cover-Traditional-Bridal-Look-NOT-AVIALABLE-TO-TRAVEL.png"
-              alt="Traditional bridal look"
-              loading="lazy"
-            >
+          <a class="reel-card reveal" href="#" aria-label="Watch Reception showcase">
+            <img class="reel-card-thumb" src="look5-thumb-placeholder.png" alt="Reception look portfolio" loading="lazy">
             <div class="reel-card-overlay"></div>
             <div class="reel-play">▶</div>
             <div class="reel-meta">
               <span class="reel-label">Bridal</span>
-              <strong>Traditional Bridal Look</strong>
+              <strong>Couture Reception Finish</strong>
             </div>
           </a>
 
         </div>
 
         <div style="text-align:center; margin-top:36px; position:relative; z-index:2;">
-          <a class="btn-ghost" href="https://www.instagram.com/glamsbykiki/" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:8px;">
-            See all reels on Instagram ↗
+          <a class="btn-ghost" href="#" style="display:inline-flex; align-items:center; gap:8px;">
+            See Entire Collection Gallery ↗
           </a>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS — background: look3 image -->
     <section id="process">
-      <!-- Section background layer -->
       <div class="section-bg-layer" aria-hidden="true">
-        <div class="section-bg-img" style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look3-edo-background.png'); animation-delay: 4s;"></div>
+        <div class="section-bg-img" style="background-image: url('process-bg-placeholder.png'); animation-delay: 4s;"></div>
         <div class="section-bg-overlay" style="background: rgba(10,8,6,0.82);"></div>
       </div>
 
@@ -732,61 +680,58 @@
         <div class="process-layout">
           <div class="process-panel reveal">
             <div>
-              <div class="kicker">The experience</div>
+              <div class="kicker">The Atelier Experience</div>
               <h2 class="display" style="font-size:clamp(42px,5.5vw,72px)">Clear booking.<br>Premium finish.</h2>
               <p class="section-note" style="margin-top:14px">
-                Beauty clients need confidence before they book. This process is calm, clear, and reassuring — from first message to final look.
+                Discerning beauty clients expect flawless service execution. This design pipeline is calm, meticulous, and fully reassuring from intake to execution.
               </p>
             </div>
             <div class="steps">
               <div class="step">
                 <div class="step-num">01</div>
                 <div>
-                  <strong>Choose your glam type</strong>
-                  <span>Bridal, event, birthday, photoshoot, gele, or training inquiry.</span>
+                  <strong>Select Custom Profile</strong>
+                  <span>Identify your timeline category: Bridal design, milestone event, portrait shoot, or professional masterclass.</span>
                 </div>
               </div>
               <div class="step">
                 <div class="step-num">02</div>
                 <div>
-                  <strong>Send date, location & style</strong>
-                  <span>Share your event date, outfit colour, location, inspiration, and preferred glam mood.</span>
+                  <strong>Coordinate Schedule & Moodboard</strong>
+                  <span>Confirm event architecture, skin tone direction, attire colors, geographical venue, and visual inspirations.</span>
                 </div>
               </div>
               <div class="step">
                 <div class="step-num">03</div>
                 <div>
-                  <strong>Arrive polished and camera-ready</strong>
-                  <span>A polished face that looks clean in person, on video, and in every photograph.</span>
+                  <strong>Impeccable Presentation</strong>
+                  <span>Walk out with an elite composition that presents beautifully live, looks crisp on camera, and retains immaculate structure.</span>
                 </div>
               </div>
             </div>
           </div>
 
-          <!-- Process image panel: background image (look1), no video -->
-          <div class="process-img reveal"
-            style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/Kiki-look1-background.png');">
+          <div class="process-img reveal" style="background-image: url('process-panel-placeholder.png');">
             <div class="process-img-content">
               <div class="process-img-inner">
                 <div class="video-play-large">▶</div>
-                <span>Lagos · Travel bookings available</span>
-                <strong>DM or WhatsApp to book bridal glam, party makeup, training, or travel appointments.</strong>
+                <span>Lagos · Global Travel Services</span>
+                <strong>Connect through the official gateway to arrange comprehensive applications, classes, or destination contracts.</strong>
               </div>
             </div>
-            <div class="process-img-badge">Available to travel 🌎</div>
+            <div class="process-img-badge">Available for Travel contracts 🌎</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- BOOKING — background: look2 image -->
     <section id="booking">
       <div class="container">
         <div class="booking-wrap reveal">
           <div class="booking-body">
-            <div class="kicker">Book or inquire</div>
+            <div class="kicker">Acquire Booking</div>
             <h2 class="display" style="font-size:clamp(44px,6.5vw,88px)">Ready for<br><em style="font-style:italic;color:var(--gold-light)">your</em> glam?</h2>
-            <p>Send your event date, preferred glam style, location in Lagos or travel destination, outfit colour, and whether you need makeup, bridal service, or training. She'll be in touch.</p>
+            <p>Provide your target scheduling constraints, preferred makeup archetype, logistical location matrix, and auxiliary parameters. The team will formalize your reservation package immediately.</p>
             <div class="service-pills">
               <span class="pill">Bridal glam</span>
               <span class="pill">Event makeup</span>
@@ -795,22 +740,19 @@
               <span class="pill">Travel bookings</span>
             </div>
             <div class="booking-actions">
-              <a class="btn-primary" href="https://wa.me/2348145994555?text=Hello%20Glamsby%20Kiki%2C%20I%20would%20like%20to%20book%20or%20ask%20about%20your%20makeup%20services." target="_blank" rel="noopener">Book on WhatsApp</a>
-              <a class="btn-ghost" href="https://www.instagram.com/glamsbykiki/" target="_blank" rel="noopener">Visit Instagram</a>
+              <a class="btn-primary" href="#">Inquire via Chat Gateway</a>
+              <a class="btn-ghost" href="#">Review Brand Directory</a>
             </div>
           </div>
-          <!-- Booking image panel: background image (look2), no video -->
-          <div class="booking-img"
-            style="background-image: url('https://raw.githubusercontent.com/builtbysammie/GlambyKiki/main/kiki-look2-background.png');">
-          </div>
+          <div class="booking-img" style="background-image: url('booking-panel-placeholder.png');"></div>
         </div>
       </div>
     </section>
 
     <footer>
       <div class="container footer-inner">
-        <p>© Glamsbykiki · Makeup, bridal glam & training in Lagos, Nigeria.</p>
-        <p>Demo concept by Built by Sammie.</p>
+        <p>© Rovoche · Premium makeup, bridal glam & training showcase.</p>
+        <p>Demo concept designed by <a href="https://rovoche.github.io/homepage/" target="_blank" rel="noopener">Rovoche</a>.</p>
       </div>
     </footer>
 
@@ -832,7 +774,6 @@
           loader.style.display = 'none';
           document.querySelector('.hero-copy')?.classList.add('enter');
           document.querySelector('.hero-card-wrap')?.classList.add('enter');
-          // Start slideshow after loader gone
           initSlideshow();
         }, 1000);
       }, remaining);
@@ -842,7 +783,6 @@
     } else {
       dismissLoader();
     }
-    // Hard fallback
     setTimeout(() => {
       if (loader && loader.style.display !== 'none') {
         loader.classList.add('fade-out');
@@ -857,26 +797,22 @@
     const heroSlideDots = document.querySelectorAll('.hero-slide-dot');
     let heroIdx = 0;
     let slideshowTimer = null;
-    const SLIDE_DURATION = 7000; // ms per slide
+    const SLIDE_DURATION = 7000; 
     const isMobile = () => window.innerWidth <= 640;
 
     function restartPan(slide) {
-      // Remove and re-add class to restart CSS animation
       slide.classList.remove('pan-active');
-      // Force reflow
       void slide.offsetWidth;
       slide.classList.add('pan-active');
     }
 
     function goToSlide(idx) {
-      // Deactivate current
       heroSlides[heroIdx].classList.remove('active');
       if (isMobile()) heroSlides[heroIdx].classList.remove('pan-active');
       heroSlideDots[heroIdx].classList.remove('active');
 
       heroIdx = idx;
 
-      // Activate new
       heroSlides[heroIdx].classList.add('active');
       heroSlideDots[heroIdx].classList.add('active');
 
@@ -890,15 +826,12 @@
     }
 
     function initSlideshow() {
-      // Activate first slide's pan on mobile
       if (isMobile()) {
         heroSlides[0].classList.add('pan-active');
       }
-      // Start auto-advance
       slideshowTimer = setInterval(nextSlide, SLIDE_DURATION);
     }
 
-    // Dot click navigation
     heroSlideDots.forEach(dot => {
       dot.addEventListener('click', () => {
         const targetIdx = parseInt(dot.dataset.slide);
@@ -909,7 +842,6 @@
       });
     });
 
-    // Re-handle resize (desktop ↔ mobile switch)
     window.addEventListener('resize', () => {
       if (!isMobile()) {
         heroSlides.forEach(s => s.classList.remove('pan-active'));
